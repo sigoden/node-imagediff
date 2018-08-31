@@ -6,7 +6,7 @@ Diff image to check whether objects have changed.
 
 ## Install
 
-- install opencv 3.x
+**install opencv 3.x**
 
 For linux
 
@@ -26,7 +26,7 @@ brew install opencv@3
 brew link --force opencv@3
 ```
 
-- install npm package
+**install npm package**
 
 ```
 npm install @sigodenjs/imagediff
