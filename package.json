@@ -1,6 +1,6 @@
 {
   "name": "@sigodenjs/imagediff",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Diff image to check whether objects have changed.",
   "main": "index.js",
   "scripts": {

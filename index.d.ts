@@ -4,12 +4,12 @@ type Opaque<T, K> = T & { __opaque__: K };
 type Int = Opaque<number, "Int">;
 
 /**
- * Diff two image
+ * score the difference of two image
  * @param img1 - The img
  * @param img2 - Anthor img
  * @param colorThred - The color threshold, 0 - 255
  */
-export function diff(img1: Buffer, img2: Buffer, colorThred: Int): boolean;
+export function diffScore(img1: Buffer, img2: Buffer, colorThred: Int): boolean;
 
 // Options to control the encoding of diff image
 interface Encoding {
@@ -25,12 +25,12 @@ interface Encoding {
 }
 
 /**
- * Get difference of two images
+ * create image from the difference of two image
  * @param img1 - The img
  * @param img2 - Anthor img
  * @param encoding -
  */
-export function getDiff(
+export function diffImage(
   img1: Buffer,
   img2: Buffer,
   encoding?: Encoding
