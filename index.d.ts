@@ -1,15 +1,12 @@
 import { Buffer } from "buffer";
 
-type Opaque<T, K> = T & { __opaque__: K };
-type Int = Opaque<number, "Int">;
-
 /**
  * score the difference of two image
  * @param img1 - The img
  * @param img2 - Anthor img
  * @param colorThred - The color threshold, 0 - 255
  */
-export function diffScore(img1: Buffer, img2: Buffer, colorThred: Int): boolean;
+export function diffScore(img1: Buffer, img2: Buffer, colorThred: number): boolean;
 
 // Options to control the encoding of diff image
 interface Encoding {
@@ -21,7 +18,7 @@ interface Encoding {
    * For PNG, it can be the compression level ( CV_IMWRITE_PNG_COMPRESSION ) from 0 to 9. A higher value means a smaller size and longer compression time. Default value is 3.
    * For WEBP, it can be a quality ( CV_IMWRITE_WEBP_QUALITY ) from 1 to 100 (the higher is the better). By default (without any parameter) and for quality above 100 the lossless compression is used.
    */
-  quantity?: Int;
+  quantity?: number;
 }
 
 /**
